@@ -21,6 +21,7 @@ These sources mostly focus on electronic consumer products, while RR focuses on 
 
 *Image: Hoover Vacuum Cleaner from Amazon.com*
 ```
+
 **Verdict:** "Despite some quality concerns, this canister model offers some of Hoover's best features for a price that's significantly lower than similar models by some competing brands."
 
 **Pros:** 
