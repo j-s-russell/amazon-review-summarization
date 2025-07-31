@@ -9,7 +9,7 @@
 :align: left
 :figclass: my-image
 
-*Image from [fireapps.io](https://fireapps.io/7-best-shopify-product-review-apps-with-1000-reviews)*
+*Image courtesy of [fireapps.io](https://fireapps.io/7-best-shopify-product-review-apps-with-1000-reviews)*
 ```
 
 ## Automated Review Summarization

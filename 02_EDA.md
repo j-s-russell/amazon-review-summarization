@@ -73,13 +73,3 @@ The following notebook will preprocess the dataset so that it includes only the 
 
 We will create columns for all three of these review subsets in the following notebook.
 
-
-
-
-```{tip}
- - Describe the dataset and why you chose it
- - Explain from where the dataset was procured (ie. the methodology used to get the data)
- - Discuss Columns and number of instances
- - Anything else that you would like readers to know about this data
-```
-
