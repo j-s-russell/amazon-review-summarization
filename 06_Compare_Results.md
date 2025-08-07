@@ -1,5 +1,8 @@
 # Comparative Analysis
 
+
+
+
 ```{tip}
 - Compare results obtained using: 
   - Traditional / Baseline methods
