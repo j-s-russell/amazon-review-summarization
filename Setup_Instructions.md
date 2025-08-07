@@ -1,67 +1,67 @@
 # Setup Instructions
 
 ```{tip}
-
-The instruction below are for Authors, but you can modify this page to specify 
-setup instructions for Readers in case if you are installing any special libraries or frameworks. 
+The instruction below cover the specific libraries necessary for this project.
 ```
+
+---
 
 ### Pre-requisities
 
-install nodejs  (https://nodejs.org/en/download)
-
-`pip install mystmd`  <-- The enhanced version of Markdown 
-
-`myst -v`  --> to confirm successful installation 
-should see version number
-
---
-
-### Install Jupyter Lab and MyST Extension for Jupyter Lab
-
-`pip install jupyterlab`
+- Python 3.8 (or higher)
+- Git
 
 
-Install the MyST extension for JupyterLab: <br/>
-`pip install jupyterlab_myst`   <--  would enable MyST MD for jupyter cells 
+### Clone Repository
 
+`git clone https://github.com/ritika-aiml/112-review-summarization-and-extraction.git`
+`cd 112-review-summarization-and-extraction`
 
-Verify that the MyST extension is installed:
-`jupyter labextension list`
+### Setup Environment
 
-You should see:
-jupyterlab-myst v2.*.* enabled OK (python, jupyterlab_myst)
+**Create virtual environment:**
+`python -m venv review_summarization_env`
 
---
+**Activate virtual environment:**
 
-### Install Jupyter Book v2 (next)
+On Windows:
+`review_summarization_env\Scripts\activate`
 
-`pip install "jupyter-book>=2.0.0a0"`   <-- installs jupyter book 
+On macOS/Linux:
+`source review_summarization_env/bin/activate`
 
-Make sure you install v2 of Jupter Book and not v1. 
+### Install Required Dependencies
 
-Juputer Book will convert your Notebooks (.ipynb) and .MD files into a nice web-hosted book 
+```python
+# Data manipulation and scientific computing
+pip install pandas numpy scikit-learn
 
+# Text processing and NLP
+pip install textblob nltk
 
---
+# Evaluation metrics
+pip install rouge-score bert-score evaluate
 
-### Publish the book
+# Extractive summarization
+pip install lexrank
 
-Please follow the guidelines here: https://next.jupyterbook.org/start/publish
+# Transformers and deep learning
+pip install torch torchvision transformers
 
-In short you have to do the following:
+# Jupyter environment
+pip install jupyterlab jupyter
 
-1. Run the following command to create a deployment script
-
-```
-jupyter book init --gh-pages
+# Utilities
+pip install textwrap3
 ```
 
-2. Go to repo settings -->  Pages --> And select Build Source as `Github Actions` (Instead of deploy from branch)
+### Launch Jupyter Lab
 
-3. Push all your changes including the file `.github/workflows/XXX.yml` to github. That will make the whole deployment process automatic. 
+Once everything is installed, start Jupyter Lab:
 
-
+```python
+jupyter lab
+```
 
 
 

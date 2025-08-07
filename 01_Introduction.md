@@ -14,7 +14,7 @@
 
 ## Automated Review Summarization
 
-In this project, we'll explore models that summarize product reviews. If you've ever used a website to make an online purchase, book a hotel, or make a restaurant reservation, chances are you've read customer reviews. These are important to ensure you are choosing the best available option and to know what to expect when you receive it. However, this can be a challenging and tedious process as many reviews are uninformative or irrelevant for your preferences. Automated review summarization aims to accurately and concisely convey the most important details of the product or service, aggregating the perspectives of many different buyers. This can also help sellers understand their product or service better and thereby improve it.
+In this project, we'll explore models that summarize product reviews. If you've ever used a website to make an online purchase, book a hotel, or make a restaurant reservation, chances are you've needed to read customer reviews. These are important to ensure you are choosing the best available option and to know what to expect when you receive it. However, this can be a challenging and tedious process as many reviews are uninformative or irrelevant for your preferences. Automated review summarization aims to accurately and concisely convey the most important details of the product or service, aggregating the perspectives of many different buyers. This can also help sellers understand their product or service better and thereby improve it.
 
 ---
 

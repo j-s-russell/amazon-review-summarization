@@ -1,6 +1,5 @@
 # Conclusion
 
-```{tip}
-- Conclude this project 
-    
-```
+In this project, we constructed extractive and abstractive models on a product review dataset, evaluating their performance through comparison with human-written summaries. We explored different ways to select subsets of reviews, including clustering and similarity regression. With our review subsets and sentiment classification, we used KL-Sum and LexRank to generate verdicts, pros, and cons by extracting important sentences from reviews. We then fine-tuned BART and T5 to generate abstractive summaries. Ultimately, these models generated somewhat informative summaries, but shared common issues, such as trouble generating negative summaries and redundancy. BART and T5 performed best overall in terms of ROUGE and BERTScore, but highlighted gaps in our evaluation metrics, demonstrating the need for initial human evaluation for summarization tasks.
+
+This project demonstrates the strengths and limitations of current summarization approaches when applied to structured product feedback. It provides a solid foundation for further research in combining extractive and abstractive methods, refining evaluation strategies, and building user-centered summarization systems for real-world applications.
