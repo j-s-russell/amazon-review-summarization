@@ -13,7 +13,7 @@
 *Image courtesy of [medium.com](https://andongluis.github.io/nlg-blog/Summarization-post/)*
 ```
 
-Extractive summarization models aim to create summaries by identifying and selecting the most important sentences or phrases directly from the original text. Instead of generating new sentences (as we'll see with the deep learning models), these models work by ranking and extracting existing content based on features like sentence relevance, position, or similarity to the overall document. The result is a condensed version of the original text that preserves its wording and structure, making extractive methods simpler and more interpretable than abstractive approaches. These models are especially useful when factual accuracy and similarity to the original writing style are priorities.
+Extractive summarization models aim to create summaries by identifying and selecting the most important sentences or phrases directly from the original text. Instead of generating new sentences (as we'll see with our deep learning models), these models work by ranking and extracting existing content based on features like sentence relevance, position, or similarity to the overall document. The result is a condensed version of the original text that preserves its wording and structure, making extractive methods simpler and more interpretable than abstractive approaches. These models are especially useful when factual accuracy and similarity to the original writing style are priorities.
 
 ---
 

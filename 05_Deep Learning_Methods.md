@@ -40,7 +40,7 @@ The Transformer model, introduced by Vaswani et al. in the 2017 paper ["Attentio
 :class-header: bg-success text-white
 - Injects information about token positions since self-attention alone has no notion of order
 - Typically uses sinusoidal functions or learned embeddings to represent position
-- Ensures the model can distinguish between sequences like “the cat sat” vs. “sat the cat"
+- Ensures the model can distinguish between sequences like “the product broke” vs. "broke the product"
 
 ```
 ````

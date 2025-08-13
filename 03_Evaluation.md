@@ -78,14 +78,3 @@ $$
 [BERTScore](https://arxiv.org/abs/1904.09675) is a way to measure how similar two pieces of text are by comparing semantic meaning. Instead of matching words exactly, it looks at how words are used in context and evaluates whether the ideas in both texts align. This makes BERTScore especially helpful when the wording is different but the message is still the same.
 
 BERTScore is based on a language model called [BERT](https://arxiv.org/abs/1810.04805) (Bidirectional Encoder Representations from Transformers), which has been trained to understand the contextual meaning of words in a piece of text. The contextual meanings between generated summaries and gold summaries, which are represented by embedding vectors, are compared using cosine similarity to determine precision, recall, and F1-scores.
-
-(more explanation here?)
-
-
-```{tip}
-  - Describe and explain the evaluation metrics you chose for this problem
-  - Why did you choose these particular metrics over others
-  - Run the evaluation metics on some dummy data to help readers understand what does a good and bad metric looks like
-  - Call-out limitations of the evaluation metrics --> ie. scenario in which it might not work well
-  - [optional] The evaluation methods can also be moved to a `utils.py` file so that they can be imported easily later
-```

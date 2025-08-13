@@ -10,28 +10,28 @@ Let's first look at how our summaries compare in terms of word overlap. Our extr
 
 |Model|rouge1|rouge2|rougeL|
 |---|---|---|---|
-|BART|0\.2235|0\.0424|0\.1654|
+|BART|**0\.2146**|**0\.0410**|0\.1619|
 |KL-Sum|0\.1404|0\.0102|0\.0917|
 |LexRank|0\.1576|0\.0136|0\.1134|
-|T5|0\.2166|0\.0393|0\.1688|
+|T5|0\.2086|0\.0346|**0\.1625**|
 
 **Pros:**
 
 |Model|rouge1|rouge2|rougeL|
 |---|---|---|---|
-|BART|0\.0122|0\.0001|0\.0122|
-|KL-Sum|0\.007|0\.0|0\.007|
-|LexRank|0\.0143|0\.0|0\.0142|
-|T5|0\.0161|0\.0001|0\.016|
+|BART|0\.0145|**0\.0001**|0\.0144|
+|KL-Sum|0\.0070|0\.0000|0\.0070|
+|LexRank|0\.0143|0\.0000|0\.0142|
+|T5|**0\.0184**|**0\.0001**|**0\.0182**|
 
 **Cons:**
 
 |Model|rouge1|rouge2|rougeL|
 |---|---|---|---|
-|BART|0\.012|0\.0001|0\.012|
-|KL-Sum|0\.0076|0\.0|0\.0076|
-|LexRank|0\.0083|0\.0|0\.0083|
-|T5|0\.0168|0\.0|0\.0168|
+|BART|0\.0182|**0\.0001**|0\.0182|
+|KL-Sum|0\.0076|0\.0000|0\.0076|
+|LexRank|0\.0083|0\.0000|0\.0083|
+|T5|**0\.0185**|0\.0000|**0\.0185**|
 
 For the overall verdicts, our abstractive models significantly outperformed our extractive models across all ROUGE scores. This is likely due to more abstractive gold summaries in which the human writers used more unique phrasing and did not copy reviews directly. 
 
@@ -47,30 +47,30 @@ Next, we'll analyze our BERTScore results and see how our generated summaries co
 
 |Model|precision|recall|f1|
 |---|---|---|---|
-|BART|0\.8764|0\.8764|0\.8763|
+|BART|0\.8805|**0\.8739**|**0\.8771**|
 |KL-Sum|0\.8258|0\.8595|0\.8423|
 |LexRank|0\.8612|0\.8594|0\.8602|
-|T5|0\.8818|0\.8725|0\.877|
+|T5|**0\.8809**|0\.8708|0\.8757|
 
 
 **Pros:**
 
 |Model|precision|recall|f1|
 |---|---|---|---|
-|BART|0\.5994|0\.7785|0\.6772|
+|BART|0\.5979|0\.7786|0\.6763|
 |KL-Sum|0\.5786|0\.7773|0\.6633|
-|LexRank|0\.6063|0\.7809|0\.6824|
-|T5|0\.6097|0\.7769|0\.683|
+|LexRank|0\.6063|**0\.7809**|0\.6824|
+|T5|**0\.6067**|0\.7802|**0\.6825**|
 
 
 **Cons:**
 
 |Model|precision|recall|f1|
 |---|---|---|---|
-|BART|0\.5992|0\.803|0\.6862|
+|BART|0\.6073|0\.8027|0\.6913|
 |KL-Sum|0\.5725|0\.7849|0\.6619|
 |LexRank|0\.578|0\.7853|0\.6657|
-|T5|0\.6122|0\.8024|0\.6944|
+|T5|**0\.6125**|**0\.8033**|**0\.6949**|
 
 We see patterns similar to the ROUGE results in these BERTScore tables - abstractive models tend to outperform across all summary types, particularly with verdicts. Performance drops significantly for pros and cons. T5 achieves the best overall performance, especially in terms of precision. One point to note is the difference between precision and recall for pros and cons, where recall is consistently much higher across all models. This demonstrates that the generated summaries cover most of the underlying meaning in the gold summaries, but include details that aren't mentioned in the gold summaries, which suggests are summaries are too long. This may not be an issue as this additional information may be useful, although extractive models may pick irrelevant sentences and abstractive deep learning models may hallucinate.
 
@@ -79,6 +79,8 @@ We see patterns similar to the ROUGE results in these BERTScore tables - abstrac
 ## Generated Summaries
 
 To better understand our results, let's take a look at the gold summary and our generated summaries for a sample product. While ROUGE and BERTScore capture important information regarding the accuracy of the generated summary, they do not everything that is necessary for a quality summary.
+
+The following summaries were generated for a chew toy for dogs (Nylabone Barbell Power Chew Durable Dog Toy).
 
 ::::{admonition} Gold Summary
 **Verdict:**  
@@ -143,38 +145,36 @@ LexRank's summaries are relatively clear and informative, highlighting the durab
 
 ::::{admonition} BART
 **Verdict:**  
-A good choice for power-chewer dogs who are looking for a chew toy that will
-keep them busy and prevent them from eating their food.
+A tough, durable nylon bone that will keep your dog busy for a long period of
+time.
 
 **Pros:**  
-Durable, durable nylon bone that's easy to chew, Available in three flavors,
-including peanut butter, which is ideal for dogs with a love of peanut butter
-and peanut butter-flavored food, Can be used by dogs with an aggressive chewer,
-Can also be used as a chew toy
+Durable nylon material keeps dogs from chewing away at the bone, It's a good
+size for power chewers, and it's easy to carry around
 
 **Cons:**  
-The toy is heavy, making it difficult for some dogs to chew through it in a
-hurry
+A few dogs have been known to chew through this toy within a few hours
 
 ::::
 
-BART's summary is a bit more informative, highlighting the variety of flavors in addition to the durability. However, it struggles with repetition and does not generate constructive cons.
+BART's summaries are concise and informative, highlighting its ideal size and portability in addition to durability. BART manages to generate a sensible cons summary, although it contradicts the durability claims in the verdict and pros summary. This highlights a major challenge in review summarization - reviews can contain conflicting information based on their particular experience. 
 
 ::::{admonition} T5
 **Verdict:**  
-This toy is a great choice for dogs who prefer to chew on a soft bone that isn't
-too hard.
+This toy is a great option for those who want a durable bone for their dog's
+teeth.
 
 **Pros:**  
-The Nylabone is a durable, durable nylon bone that's hard and durable, It's a
-great choice if you're a serious power chewer
+The nylon bone is hard, durable and odor-free, It isn't a power chewer but it
+keeps them busy.
 
 **Cons:**  
-if your dog is a power chewer, this toy is not for her
+It is not a chewing toy for dogs, but if your dog is an aggressive chewer, this
+may be the one for you
 
 ::::
 
-T5 also struggles with repetition. The pros and cons also include a direct contradiction, showing the model is unsure that a dog being a "power chewer" is ideal for this product.
+T5 generates mostly sensible summaries, but struggles with some incoherent language. Like the extractive models, T5 struggles with generating cons, incorrectly stating "it is not a chewing toy for dogs". 
 
-This is just one example, but it highlights some difficulties in review summarization. One area all models struggled with was generating cons, which likely means that there were few negative reviews. Additionally, abstractive models struggled with repetition and some incoherent language. More data and further training may be necessary to correct these issues.
+This is just one example, but it highlights some difficulties in review summarization. Product reviews contain much more noise than typical text input for these models, making it difficult to concisely and accurately summarize all reviews. One area most models struggled with was generating cons, likely due to a lack of negative reviews. Additionally, abstractive models struggled with repetition and some incoherent language. More data and further training may be necessary to correct these issues.
 
