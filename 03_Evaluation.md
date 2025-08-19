@@ -4,7 +4,7 @@ Our goal is to generate summaries that are as similar to the gold summaries as p
 
 ## ROUGE
 
-[ROUGE](https://aclanthology.org/W04-1013/ )(Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics for evaluating text generation by measuring overlaps of n-grams (continuous sequences of $n$ words), word sequences, and word pairs between the generated and reference texts. Higher ROUGE scores indicate greater similarity and are commonly used to assess the quality of extractive and abstractive summaries.
+[ROUGE](https://aclanthology.org/W04-1013/ ) (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics for evaluating text generation by measuring overlaps of n-grams (continuous sequences of $n$ words) between the generated and reference texts. Higher ROUGE scores indicate greater similarity and are commonly used to assess the quality of extractive and abstractive summaries.
 
 - **ROUGE-1:** Measures the overlap of unigrams (each word) between generated text and reference text
 - **ROUGE-2:** Measures the overlap of bigrams (each sequential pair of words) between generated text and reference text

@@ -28,7 +28,7 @@ We will be using two main types of algorithms for summarization: extractive (sel
 ```{grid-item-card} Extractive Methods
 :class-header: bg-primary text-white
 - **KL-Sum:** Selects sentences minimizing the KL divergence between the summary and the word distribution of all reviews.
-- **LexRank:** Graph-based algorithm that ranks sentences by their centrality using cosine similarity and PageRank-like algorithms
+- **LexRank:** Graph-based algorithm that ranks sentences by their centrality and proximity to other sentences
 ```
 
 ```{grid-item-card} Abstractive Methods
