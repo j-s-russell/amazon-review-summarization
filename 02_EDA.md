@@ -39,7 +39,7 @@ These sources mostly focus on electronic consumer products, while RR focuses on 
 
 ## Dataset Features
 
-The full dataset includes 31,483 products and summaries, with an average of 326 reviews per product. We will be using a subset of this dataset with 5000 products, with a maximum of 100 reviews per product. While the dataset includes product metadata such as ratings and review authors, we will focus purely on the reviews and summaries. The full dataset is  available on [this GitHub repository](https://github.com/abrazinskas/SelSum/tree/master/data) for the original paper (this project uses the 374.8 MB JSON version).
+The full dataset includes 31,483 products and summaries, with an average of 326 reviews per product. We will be using a subset of this dataset with about 2000 products, with a maximum of 100 reviews per product. While the dataset includes product metadata such as ratings and review authors, we will focus purely on the reviews and summaries. The full dataset is  available on [this GitHub repository](https://github.com/abrazinskas/SelSum/tree/master/data) for the original paper (this project uses the 374.8 MB JSON version).
 
 ::::{admonition} Note
 All data (processed and unprocessed) is available in [this Google Drive folder](https://drive.google.com/drive/folders/1Co17sm-z_BDJCgbEjEGVDocbxX1ol2KM).
